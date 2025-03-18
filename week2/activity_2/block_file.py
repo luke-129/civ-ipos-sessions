@@ -1,22 +1,42 @@
-# main.py 
-# Organisation data 
+from abc import ABC, abstractmethod
+from math import pi
 
-# Contact data 
-  
-# Project data 
 
-# Function to add a contact to an organisation 
+class IShape(ABC):
+    @abstractmethod
+    def get_area(self):
+        pass
 
-# Function to add a project to an organisation 
+class Pizza(object):
+    def __init__(self, _price: float, _shape: IShape):
+        self.price = _price
 
-# Initialise organisations 
+    def get_price(self):
+        return self.price
 
-# Initialise contacts 
 
-# Initialise projects 
+class Circle(IShape):
+    def __init__(self, __radius: float):
+        self.radius = __radius
 
-# Add contact to organisation 
+    def to_string(self):
+        return str(self.get_area())
 
-# Add project to organisation 
+    def get_area(self):
+        return pi * self.radius * self.radius
 
-# Display organisation details 
+class Rectangle(IShape):
+    def __init__(self, __height: float, __width: float):
+        self.height = __height
+        self.width = __width
+
+    def get_area(self):
+        return self.height * self.width
+
+    def to_string(self):
+        return str(self.get_area())
+
+
+class PizzaDeal:
+    def deal(self, deal: float, pizza: Pizza):
+        return pizza.get_price() / deal

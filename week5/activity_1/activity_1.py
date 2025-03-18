@@ -3,6 +3,7 @@
 # Main program logic
 
     # Open the binary file for reading and create output text and bytes files for writing using the context manager
+        with open("data.bin", "rb") as data_file:
 
         # Iterate through each line in the binary file
 

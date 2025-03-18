@@ -1,0 +1,22 @@
+date,product_id,product_name,unit_price,units_sold
+2025-01-01,1001,Smartphone X,599.99,10
+2025-01-01,1002,Laptop Pro,1299.99,5
+2025-01-01,1003,Wireless Earbuds,129.99,15
+2025-01-02,1001,Smartphone X,599.99,8
+2025-01-02,1002,Laptop Pro,1299.99,3
+2025-01-02,1004,Smart Watch,249.99,12
+2025-01-03,1001,Smartphone X,599.99,12
+2025-01-03,1003,Wireless Earbuds,129.99,20
+2025-01-03,1004,Smart Watch,249.99,9
+2025-01-04,1002,Laptop Pro,1299.99,7
+2025-01-04,1003,Wireless Earbuds,129.99,18
+2025-01-04,1005,Tablet Mini,399.99,11
+2025-01-05,1001,Smartphone X,599.99,15
+2025-01-05,1004,Smart Watch,249.99,14
+2025-01-05,1005,Tablet Mini,399.99,6
+2025-01-06,1001,Smartphone X,579.99,11
+2025-01-06,1002,Laptop Pro,1249.99,4
+2025-01-06,1003,Wireless Earbuds,119.99,22
+2025-01-07,1003,Wireless Earbuds,119.99,25
+2025-01-07,1004,Smart Watch,249.99,16
+2025-01-07,1005,Tablet Mini,399.99,9

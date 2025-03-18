@@ -1,13 +1,28 @@
 # Remember you file paths when you attempt use this file reader
 # import the reuseable csv library - docs at: https://docs.python.org/3/library/csv.html
-
+import csv
 # Function to read data from CSV file
 def read_sales_data(filename):
 # Task 1: Read data from CSV file
-    pass
+
+    with open(filename, "r") as file:
+        content = csv.reader(file)
+        next(content)
+        raw_data = [i for i in content]
+    return raw_data
 
 # Task 2: Calculate total revenue for each product
+data = read_sales_data("data.csv")
+#[print(i) for i in data]
 
+def calculate_total_revenue_each_product():
+    
+
+
+print(calculate_total_revenue_each_product())
+
+
+calculate_total_revenue_each_product()
 # Task 3: Identify the product that generated the maximum revenue
 
 # Task 4: Calculate total revenue for each day
@@ -30,27 +45,27 @@ def read_sales_data(filename):
 #     globals()[variable_1] = "Some value"
 
 # Display results
-print("Total revenue for each product:")
-for product, revenue in product_revenue.items():
-    print(f"{product}: ${revenue:.2f}")
-
-print("\nThe product that generated the maximum revenue:")
-print(max_revenue_product)
-
-print("\nTotal revenue for each day:")
-for date, revenue in date_revenue.items():
-    print(f"{date}: ${revenue:.2f}")
-
-print("\nThe day with the highest total revenue:")
-print(max_revenue_date)
-
-print("\nTotal units sold for each product:")
-for date, revenue in date_revenue.items():
-    print(f"{date}: ${revenue:.2f}")
-
-print("\nThe product with the highest total units sold:")
-print(max_units_sold_product)
-
-print("\nAverage unit price for each product:")
-for product, avg_price in product_unit_price.items():
-    print(f"{product}: ${avg_price:.2f}")
+# print("Total revenue for each product:")
+# for product, revenue in product_revenue.items():
+#     print(f"{product}: ${revenue:.2f}")
+#
+# print("\nThe product that generated the maximum revenue:")
+# print(max_revenue_product)
+#
+# print("\nTotal revenue for each day:")
+# for date, revenue in date_revenue.items():
+#     print(f"{date}: ${revenue:.2f}")
+#
+# print("\nThe day with the highest total revenue:")
+# print(max_revenue_date)
+#
+# print("\nTotal units sold for each product:")
+# for date, revenue in date_revenue.items():
+#     print(f"{date}: ${revenue:.2f}")
+#
+# print("\nThe product with the highest total units sold:")
+# print(max_units_sold_product)
+#
+# print("\nAverage unit price for each product:")
+# for product, avg_price in product_unit_price.items():
+#     print(f"{product}: ${avg_price:.2f}")
