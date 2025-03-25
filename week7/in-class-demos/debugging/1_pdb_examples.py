@@ -14,14 +14,14 @@
 # n: Move to the next line in the current function.
 # r (return): Continue execution until the current function returns.
 
-# import os
+import os
 
 # def get_path(filename):
 #     """Return file's path or empty string if no path."""
 #     breakpoint()
 #     head, tail = os.path.split(filename)
 #     import pdb; pdb.set_trace()
-
+#
 #     return head
 
 
@@ -37,7 +37,7 @@
 # q: Quit the debugger.
 
 # import os
-
+#
 # def get_path(filename):
 #     """Return file's path or empty string if no path."""
 #     head, tail = os.path.split(filename)

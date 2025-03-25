@@ -17,9 +17,9 @@ def print_board():
 def is_win(player, board_snapshot=board):
     '''Check rows, columns, and diagonals for win condition for a given player'''
     for i in range(3):
-        if not all([cell == player for cell in board_snapshot[i]]):  # Rows
+        if all([cell == player for cell in board_snapshot[i]]):  # Rows
             return True
-        if not all([board_snapshot[j][i] == player for j in range(3)]):  # Columns
+        if all([board_snapshot[j][i] == player for j in range(3)]):  # Columns
             return True
     if board_snapshot[1][0] == board_snapshot[1][1] == board_snapshot[2][2] == player or \
        board_snapshot[0][0] == board_snapshot[1][1] == board_snapshot[2][0] == player:  # Diagonals
@@ -45,8 +45,9 @@ def main():
         if board[row][col] == ' ':
             board[row][col] = current_player
             win = is_win(current_player)
-            results.append(win)
+
             if win:
+                results += 1
                 print_board()
                 print(f"Player {current_player} wins!")
                 return

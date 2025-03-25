@@ -5,7 +5,7 @@ import pprint
 import traceback
 
 # # Set up logging
-# logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+#logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Configuring logging to write to a file
 logging.basicConfig(filename='app.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -55,11 +55,11 @@ def process_numbers(numbers):
 
 # Sample data to process
 numbers = [5, -3, 2, -8, 7, 10, -1, 0]
-# numbers = [5, -3, 'a', -8, 7, 10, -1, 0]
+#numbers = [5, -3, 'a', -8, 7, 10, -1, 0]
 
 try:
     result = process_numbers(numbers)
-    log_message(f"Final result: {result}") #c change to incorrect variable name
+    log_message(f"Final result: {resdult}") #c change to incorrect variable name
 except Exception as error:
     logging.error(f"An unexpected error occurred: {error}")
     traceback.print_exc()

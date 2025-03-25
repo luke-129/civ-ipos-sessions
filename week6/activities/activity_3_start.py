@@ -10,7 +10,7 @@
 # Print the connections between locations to visualize the map structure.
 
 from dataclasses import dataclass
-
+@dataclass
 class Location:
     name: str
     latitude: float
@@ -23,32 +23,35 @@ class Graph:
 
     def add_location(self, location):
         # Create an empty list for each location's connections
-        # Each location is now a vertice in the graph object
-        pass
 
+        # Each location is now a vertice in the graph object
+        self.vertices[location.name] = []
 
     def add_connection(self, location1_name, location2_name):
-        pass
         # Search the dicitonary keys for the two locations
-
+        if location1_name in self.vertices and location2_name in self.vertices:
             # Add the connection bidirectionally
             # If both keys are found connect them by adding each to the Locations list
             # Check if location 2 is in the vertice for location 1
       
                 # If location 2 is not there add to the location 1 list
-  
+                if location2_name not in self.vertices[location1_name]:
+                    self.vertices[location1_name].append(location2_name)
+
             # Check if location 2 is in the vertice for location 1
 
                 # If location 2 is not there add to the location 1 list
+                if location1_name not in self.vertices[location2_name]:
+                    self.vertices[location2_name].append(location1_name)
 
-        # else:
-        #     print(f"One or both locations '{location1_name}' and '{location2_name}' do not exist in the graph.")
+        else:
+            print(f"One or both locations '{location1_name}' and '{location2_name}' do not exist in the graph.")
 
     def display(self):
         # Loop through the Graph object and print the connections
-        pass
-            # connections = " -> ".join()
-            # print(f"{location}: {connections}")
+        for location, connected_locations in self.vertices.items():
+            connected_locations = " -> ".join(connected_locations) if connected_locations else "No Connections"
+            print(f"{location}: {connected_locations}")
 
 # Example usage:
 def main():

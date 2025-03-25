@@ -9,14 +9,17 @@ Ensure you step through this program in pdb only to understand how the program w
 # Once debugged add some documentation examples to help the next programmer!
 
 import sys
-# import os
+import os
 
 def add_task(tasks, task):
     tasks.append((task, False))
 
 def mark_task_completed(tasks, index):
     if 0 <= index < len(tasks):
-        tasks[index] = True 
+
+        task, _ = tasks[index]
+        tasks[index] = (task, True)
+
     else:
         print("Invalid task index.")
 
@@ -32,7 +35,7 @@ def list_tasks(tasks):
         return
 
     for index, task in enumerate(tasks):
-        print(f"{index}. {'[X]' if task else '[ ]'} {task[0]}") 
+        print(f"{index}. {'[X]' if task[1] else '[ ]'} {task[0]}")
 
 def sort_tasks(tasks):
     tasks.sort(key=lambda x: x[0])
@@ -51,7 +54,8 @@ def binary_search(tasks, target):
     return -1
 
 def main():
-    # import pdb; pdb.set_trace()
+    import pdb
+    pdb.set_trace()
     tasks = []
 
     while True:

@@ -1,0 +1,18 @@
+2025-03-25 06:03:56,391 - DEBUG - This is a debug message
+2025-03-25 06:03:56,391 - INFO - This is an info message
+2025-03-25 06:03:56,391 - WARNING - This is a warning message
+2025-03-25 06:03:56,391 - ERROR - This is an error message
+2025-03-25 06:03:56,391 - CRITICAL - This is a critical message
+2025-03-25 06:04:50,563 - DEBUG - This is a debug message
+2025-03-25 06:04:50,563 - INFO - This is an info message
+2025-03-25 06:04:50,563 - WARNING - This is a warning message
+2025-03-25 06:04:50,563 - ERROR - This is an error message
+2025-03-25 06:04:50,563 - CRITICAL - This is a critical message
+2025-03-25 06:04:50,571 - ERROR - An unexpected error occurred: name 'resdult' is not defined
+2025-03-25 06:04:50,572 - ERROR - Unhandled exception: name 'resdult' is not defined
+Traceback (most recent call last):
+  File "C:\Users\chasi\source\repos\civ-ipos-sessions\week7\in-class-demos\debugging\2_print_debugging.py", line 62, in <module>
+    log_message(f"Final result: {resdult}") #c change to incorrect variable name
+                                 ^^^^^^^
+NameError: name 'resdult' is not defined. Did you mean: 'result'?
+
